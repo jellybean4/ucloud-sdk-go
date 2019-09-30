@@ -1,4 +1,4 @@
-module github.com/ucloud/ucloud-sdk-go
+module github.com/jellybean4/ucloud-sdk-go
 
 require (
 	github.com/pkg/errors v0.8.0
