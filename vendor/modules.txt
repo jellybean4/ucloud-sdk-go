@@ -4,7 +4,7 @@ github.com/konsorten/go-windows-terminal-sequences
 github.com/pkg/errors
 # github.com/sirupsen/logrus v1.3.0
 github.com/sirupsen/logrus
-# github.com/ucloud/ucloud-sdk-go v0.8.10
+# github.com/ucloud/ucloud-sdk-go v0.11.1
 github.com/ucloud/ucloud-sdk-go/ucloud
 github.com/ucloud/ucloud-sdk-go/ucloud/auth
 github.com/ucloud/ucloud-sdk-go/ucloud/request

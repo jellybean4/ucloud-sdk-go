@@ -5,7 +5,7 @@ import "github.com/ucloud/ucloud-sdk-go/ucloud/response"
 type ListUFlinkApplicationPointsResponse struct {
 	response.CommonBase
 
-	data []HDFSFileStatus
+	Data []HDFSFileStatus
 }
 
 func (c *UFlinkClient) ListUFlinkApplicationPoints(req *ApplicationRequest) (*ListUFlinkApplicationPointsResponse, error) {
