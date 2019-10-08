@@ -11,6 +11,23 @@ type CreateUFlinkApplicationRequest struct {
 
 	FlinkVersion *string `required:"true"`
 
+	JobType *string `required:"true"`
+
+	AppFile *string `required:"false"`
+
+	AppParams *string `required:"false"`
+
+	SubmitParams *string `required:"false"`
+
+	RuntimeParams *string `required:"false"`
+
+	ApplicationId *string `required:"false"`
+
+	SQL *string `required:"false"`
+
+	UDXFJars *string `required:"false"`
+
+	Resources *string `required:"false"`
 }
 
 func (c *UFlinkClient) NewCreateUFlinkApplicationRequest() *CreateUFlinkApplicationRequest {
@@ -18,4 +35,15 @@ func (c *UFlinkClient) NewCreateUFlinkApplicationRequest() *CreateUFlinkApplicat
 	c.Client.SetupRequest(req)
 	req.SetRetryable(false)
 	return req
+}
+
+func (c *UFlinkClient) CreateUFlinkApplication(req *CreateUFlinkApplicationRequest) (*ApplicationResponse2, error) {
+	var err error
+	var res ApplicationResponse2
+
+	err = c.Client.InvokeAction("CreateUFlinkApplication", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
 }
