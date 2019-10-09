@@ -25,3 +25,14 @@ func (c *UFlinkClient) NewGetUFlinkSubmittedJobLogRequest() *GetUFlinkSubmittedJ
 	req.SetRetryable(true)
 	return req
 }
+
+func (c *UFlinkClient) GetUFlinkSubmittedJobLog(req *GetUFlinkSubmittedJobLogRequest) (*GetUFlinkSubmittedJobLogResponse, error) {
+	var err error
+	var res GetUFlinkSubmittedJobLogResponse
+
+	err = c.Client.InvokeAction("GetUFlinkSubmittedJobLog", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
